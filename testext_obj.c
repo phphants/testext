@@ -91,7 +91,7 @@ PHP_METHOD(TestExtObj, isLoser)
 	}
 	else
 	{
-		RETURN_TRUE;
+		RETURN_FALSE;
 	}
 }
 
