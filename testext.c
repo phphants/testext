@@ -24,7 +24,7 @@ PHP_MINIT_FUNCTION(testext)
 	INIT_CLASS_ENTRY(ce, "TestExtObj", testext_functions);
 	TestExtObj_ce = zend_register_internal_class(&ce TSRMLS_CC);
 	TestExtObj_ce->create_object = TestExtObj_object_new;
-	memcpy(&TestObjExt_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
+	memcpy(&TestExtObj_handlers, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
 	TestExtObj_handlers.clone_obj = NULL;
 	return SUCCESS;
 }
